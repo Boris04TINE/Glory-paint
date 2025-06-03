@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glory Paint - Peinture & Décoration</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f3dec3;
+      color: #222;
+    }
+    header {
+      background-color: #7867f2;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header img {
+      width: 120px;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #222;
+    }
+    nav a {
+      color: rgb(255, 255, 255);
+      padding: 1rem;
+      text-decoration: rgb(78, 4, 147);
+    }
+    nav a:hover {
+      background-color: #444;
+    }
+    .hero {
+      background: url('https://source.unsplash.com/1600x600/?painting,interior') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgb(17, 3, 81);
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    }
+    .section {
+      padding: 2rem;
+      text-align: center;
+    }
+    .section h2 {
+      color: #fc7e0f;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    .card {
+      background-color: rgb(172, 164, 245);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card p {
+      padding: 1rem;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .whatsapp img {
+      width: 35px;
+      height: 35px;
+    }
+    .btn-catalogue {
+      background-color: #fc7e0f;
+      color: rgb(250, 250, 250);
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    .btn-catalogue:hover {
+      background-color: #a96529;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="C:\Users\HP\Downloads\glory-paint-site\GP.png.png" alt="Logo Glory Paint">
+    <h1>Glory Paint</h1>
+    <p>Transformez vos espaces, inspirez vos vies.</p>
+  </header>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#realisations">Réalisations</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="hero">
+    Sublimez vos murs avec style
+  </div>
+  <section id="services" class="section">
+  <h2>Nos Services</h2>
+  <p>Chez <strong>Glory Paint</strong>, chaque mur est une toile d’expression. Nous vous offrons des <strong>services de peinture intérieure et extérieure</strong>, de <strong>décoration murale artistique</strong> et d'<strong>effets décoratifs sur mesure</strong>, pensés pour transformer vos espaces en véritables œuvres d’art. Que vous soyez particulier ou professionnel, notre équipe passionnée allie créativité, précision et matériaux de qualité pour sublimer chaque pièce selon vos goûts et votre identité. :</p>
+  </div>
+</section>
+<section id="devis" class="section">
+  <h2>Demande de devis</h2>
+  <p>Remplissez ce formulaire pour recevoir un devis personnalisé par email :</p>
+
+  <form action="https://formsubmit.co/boristine14@gmail.com" method="POST" style="max-width: 600px; margin: auto; text-align: left;">
+    
+    <!-- Empêche le spam -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="Nouvelle demande de devis Glory Paint">
+
+    <label>Nom complet :</label>
+    <input type="text" name="Nom" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;" />
+
+    <label>Email :</label>
+    <input type="email" name="Email" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;" />
+
+    <label>Téléphone :</label>
+    <input type="text" name="Téléphone" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;" />
+
+    <label>Surface à peindre (m²) :</label>
+    <input type="number" name="Surface" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;" />
+
+    <label>Type de peinture :</label>
+    <select name="Type de peinture" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;">
+      <option value="Standard">Standard</option>
+      <option value="Premium">Premium</option>
+      <option value="Décorative">Décorative</option>
+    </select>
+
+    <label>Message / Détails :</label>
+    <textarea name="Message" rows="4" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"></textarea>
+
+    <button type="submit" class="btn-catalogue">Envoyer ma demande</button>
+  </form>
+</section>
+
+</p>
+.</p>
+  </section>
+  <section id="realisations" class="section">
+    <h2>Nos Réalisations</h2>
+    <div class="gallery">
+      <div class="card">
+        <img src="C:\Users\HP\Downloads\glory-paint-site\chambre.png" alt="Peinture murale 1">
+        <p>Décoration murale artistique réalisée dans un salon moderne à Dakar.</p>
+      </div>
+      <div class="card">
+        <img src="C:\Users\HP\Downloads\glory-paint-site\image.png" alt="Peinture intérieure 2">
+        <p>Peinture intérieure sobre et élégante dans une chambre à coucher.</p>
+      </div>
+      <div class="card">
+        <img src="C:\Users\HP\Downloads\glory-paint-site\façade.png" alt="Peinture extérieure 3">
+        <p>Rénovation extérieure d'une façade avec des couleurs résistantes au climat.</p>
+      </div>
+      <div class="card">
+        <img src="C:\Users\HP\Downloads\glory-paint-site\murs artistique.PNG" alt="Mur artistique 4">
+        <p>Murs décoratifs personnalisés pour un restaurant haut de gamme.</p>
+      </div>
+      <div class="card">
+        <img src="C:\Users\HP\Downloads\glory-paint-site\ambiancecoloré.png" alt="Peinture colorée 5">
+        <p>Ambiance colorée dans un espace coworking dynamique.</p>
+      </div>
+      <div class="card">
+        <img src="C:\Users\HP\Downloads\glory-paint-site\fresque.png" alt="Fresque murale 6">
+        <p>Fresque murale peinte à la main pour un espace commercial.</p>
+      </div>
+      <div class="card">
+        <img src="C:\Users\HP\Downloads\glory-paint-site\cuisine.png" alt="Cuisine décorée 7">
+        <p>Décoration murale contemporaine dans une cuisine familiale.</p>
+      </div>
+      <div class="card">
+        <img src="C:\Users\HP\Downloads\glory-paint-site\bureau,png.jpg" alt="Peinture bureau 8">
+        <p>Peinture minimaliste pour un environnement de travail apaisant.</p>
+      </div>
+    </div>
+    <a href="https://wa.me/221783998396?text=Bonjour%2C%20je%20souhaite%20recevoir%20le%20catalogue%20des%20réalisations%20Glory%20Paint%20par%20WhatsApp." class="btn-catalogue" target="_blank">Recevoir le catalogue complet sur WhatsApp</a>
+  </section>
+  <section id="contact" class="section">
+    <h2>Contactez-nous</h2>
+    <p>Email : boristine14@gmail.com</p>
+  </section>
+  <footer>
+    <p>&copy; 2025 Glory Paint - Tous droits réservés</p>
+  </footer>
+  <a class="whatsapp" href="https://wa.me/221783998396" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = "translateY(0)";
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    document.querySelectorAll('.card').forEach(card => {
+      card.style.opacity = 0;
+      card.style.transform = "translateY(50px)";
+      card.style.transition = "all 0.5s ease-out";
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>
